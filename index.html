@@ -1,53 +1,79 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACEC Chile | Inclusión Alimentaria</title>
+    <title>ACEC Chile | Inclusión Alimentaria y Transparencia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        /* Configuración de paleta de colores corregida */
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'celiac-green': '#2D6A4F',
-                        'celiac-light': '#D8F3DC',
-                        'celiac-sand': '#F8F9FA'
+                        'acec-verde': '#2D6A4F',
+                        'acec-crema': '#F8F9FA',
+                        'acec-tierra': '#D4A373',
+                        'acec-oscuro': '#1B4332'
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-celiac-sand text-gray-800 font-sans">
-    <!-- Encabezado -->
-    <header class="bg-celiac-green text-white py-12 px-6 text-center">
-        <h1 class="text-4xl font-bold mb-2">ACEC Chile</h1>
-        <p class="text-emerald-100 italic">Agrupación de Celíacos - Por un Chile Inclusivo</p>
+<body class="bg-acec-crema text-gray-800 font-sans leading-relaxed">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold text-acec-verde uppercase tracking-wider">ACEC Chile</span>
+            <div class="space-x-6 text-sm font-semibold">
+                <a href="#mision" class="hover:text-acec-tierra">Misión</a>
+                <a href="#lobby" class="hover:text-acec-tierra">Labor Legislativa</a>
+                <a href="#contacto" class="text-acec-verde border border-acec-verde px-4 py-2 rounded hover:bg-acec-verde hover:text-white transition">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-20 bg-acec-verde text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl font-extrabold mb-6">Por un Chile con Inclusión Alimentaria</h1>
+            <p class="text-xl text-green-100 max-w-2xl mx-auto">Agrupación dedicada a la defensa, visibilización y acceso seguro para personas celíacas. Trabajamos por un sistema donde la salud sea un derecho, no una barrera.</p>
+        </div>
     </header>
 
-    <!-- Contenido principal -->
-    <main class="max-w-4xl mx-auto p-6 md:p-10">
-        <!-- Sección de Lobby y Legislación -->
-        <section class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-celiac-green mb-8">
-            <h2 class="text-2xl font-bold text-celiac-green mb-4">Gestión Legislativa y Lobby</h2>
-            <p class="leading-relaxed text-gray-700">
-                Nuestra misión central es la visibilización y el acceso seguro a los alimentos. 
-                Participamos activamente en audiencias legislativas en el Congreso, 
-                promoviendo la correcta reglamentación de la Ley Celíaca y fiscalizando 
-                la implementación efectiva de la Ley de Lobby para garantizar transparencia.
-            </p>
+    <main class="max-w-4xl mx-auto px-6 py-16">
+        
+        <section id="mision" class="mb-16">
+            <h2 class="text-3xl font-bold text-acec-oscuro mb-6 border-l-4 border-acec-tierra pl-4">Nuestra Misión</h2>
+            <p class="text-lg">Representamos la voz de la comunidad celíaca frente a los desafíos cotidianos de acceso a alimentos sin contaminación cruzada. Nuestro trabajo se centra en tres pilares: **Educación, Regulación y Fiscalización**.</p>
         </section>
 
-        <!-- Buzón de contacto -->
-        <section class="bg-celiac-light p-8 rounded-xl">
-            <h3 class="font-bold text-xl text-celiac-green mb-4">Contacto Ciudadano</h3>
-            <p class="mb-6">Tu voz es fundamental. Si tienes dudas, requieres asesoría sobre inclusión alimentaria o quieres colaborar con la agrupación, escríbenos:</p>
-            <a href="mailto:contacto@acec.cl" class="bg-celiac-green text-white px-8 py-3 rounded-full hover:bg-green-900 transition font-bold shadow-md">
-                Enviar Correo a la Agrupación
+        <section id="lobby" class="mb-16 bg-white p-10 rounded-2xl shadow-sm border border-gray-100">
+            <h2 class="text-3xl font-bold text-acec-oscuro mb-8">Gestión Legislativa y Lobby</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-bold text-acec-verde text-lg mb-2">Transparencia Total</h3>
+                    <p>Nuestras reuniones con el poder legislativo y autoridades sanitarias están registradas bajo la Ley de Lobby. Creemos que la incidencia política debe ser pública y fidedigna.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-acec-verde text-lg mb-2">Ley Celíaca y Reglamentación</h3>
+                    <p>Participamos en la construcción de los reglamentos para la Ley 21.362, exigiendo que los estándares de etiquetado y seguridad alimentaria en establecimientos públicos sean estrictos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="bg-acec-oscuro text-white p-10 rounded-2xl">
+            <h3 class="text-2xl font-bold mb-4">Buzón de Atención Ciudadana</h3>
+            <p class="mb-8 opacity-80">¿Necesitas denunciar un caso de falta de opción sin gluten? ¿Quieres saber cómo participar? Escríbenos.</p>
+            <a href="mailto:contacto@acec.cl" class="inline-block bg-acec-tierra text-white font-bold py-3 px-8 rounded hover:bg-orange-700 transition">
+                Enviar correo a la Agrupación
             </a>
         </section>
     </main>
+
+    <footer class="text-center py-10 text-gray-500 text-sm">
+        <p>&copy; 2026 Agrupación de Celíacos de Chile (ACEC).</p>
+        <p class="mt-2">Trabajando por un Chile más inclusivo.</p>
+    </footer>
+
 </body>
 </html>
